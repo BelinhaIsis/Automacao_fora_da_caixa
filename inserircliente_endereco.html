@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="estilos/estilos.css">
+		<script type="text/javascript" src="javascript/util.js"></script>
+		<script type="text/javascript" src="javascript/inserircliente.js"></script>
+	</head>
+	<body onload="inserircliente_CarregarLocalStorages();util_data()">		
+		<header class="container" align="right">
+			<figure class="logotipo">
+				<img src="imagens/logo.png" alt="A Fantástica Fábrica de Guarda-Chuvas">
+			</figure>
+			<nav class="menu-opcoes-superior">
+				<ul>
+					<li>			
+						<label id="boasvindas"></label>
+						<script>
+						  document.getElementById('boasvindas').innerHTML = 'Bem vindo, ' + localStorage.nome_login + "!";
+						</script>							
+					</li>
+					<li>
+						<a id="logout" href="index.html" onclick="util_limparLocalStorage()">Logout</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<section class="container">
+			<nav class="menu-erp">
+				<ul>
+					<li>
+						<a href="#">Clientes</a>
+						<ul>
+							<li><a href="#">Consultar</a></li>
+							<li><a href="inserircliente_identificacao.html">Inserir</a></li>
+							<li><a href="#">Editar</a></li>
+						</ul>
+					</li>						
+					<li>
+						<a href="#">Pedidos</a>
+						<ul>
+							<li><a href="#">Consultar</a></li>
+							<li><a href="#">Inserir</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</section>
+		<section class="container-conteudo">
+			<form id="form_principal">
+				<h3>Clientes >> Inserir</h3>
+				<h4>Endereço Principal:</h4>
+				<p>
+					<label for="endp_cep">CEP: </label><input type="text" id="endp_cep" class="cep" onkeypress="util_mascara(this, '#####-###')" maxlength="9"/>
+					<label for="endp_endereco">Endereço: </label><input type="text" id="endp_endereco"/>
+					<label for="endp_numero">Número: </label><input type="text" id="endp_numero" class="numero"/>
+				</p>
+				<p>
+					<label for="endp_complemento">Compl.: </label><input type="text" id="endp_complemento" class="complemento"/>
+					<label for="endp_cidade">Cidade: </label><input type="text" id="endp_cidade"/>
+					<label for="endp_estado">Estado: </label> 
+					<select id="endp_estado">
+						<option value="selecione">Selecione</option>
+						<option value="PR">PR</option>
+						<option value="RS">RS</option>					
+						<option value="SC">SC</option>
+						<option value="SP">SP</option>
+					</select>
+				</p>
+				<p>
+					<label for "endp_telefone">Telefone: </label><input type="text" id="endp_telefone" class="telefone" onkeypress="util_mascara(this, '## ####-####')" maxlength="12">
+					<label for "endp_celular">Celular: </label><input type="text" id="endp_celular" class="telefone" onkeypress="util_mascara(this, '## #####-####')" maxlength="13">
+				</p>
+				<h4>Endereço de Cobrança:</h4>
+				<p>
+					<label for="endc_cep">CEP: </label><input type="text" id="endc_cep" class="cep" onkeypress="util_mascara(this, '#####-###')" maxlength="9"/>
+					<label for="endc_endereco">Endereço: </label><input type="text" id="endc_endereco"/>
+					<label for="endc_numero">Número: </label><input type="text" id="endc_numero" class="numero"/>
+				</p>
+				<p>
+					<label for="endc_complemento">Compl.: </label><input type="text" id="endc_complemento" class="complemento"/>
+					<label for="endc_cidade">Cidade: </label><input type="text" id="endc_cidade"/>
+					<label for="endc_estado">Estado: </label>
+					<select id="endc_estado">
+						<option value="selecione">Selecione</option>
+						<option value="PR">PR</option>
+						<option value="RS">RS</option>					
+						<option value="SC">SC</option>
+						<option value="SP">SP</option>
+					</select>
+				</p>
+				<p>
+					<label for "endc_telefone">Telefone: </label><input type="text" id="endc_telefone" class="telefone" onkeypress="util_mascara(this, '## ####-####')" maxlength="12">
+					<label for "endc_celular">Celular: </label><input type="text" id="endc_celular" class="telefone" onkeypress="util_mascara(this, '## #####-####')" maxlength="13">
+				</p>
+			</form>
+		</section>
+		<section class="botoes">
+			<form>				
+				<input type="button" id="salvar" value="Salvar" onClick="inserircliente_Salvar()"/>
+				<input type="button" id="voltar" value="Voltar" onClick="inserircliente_Voltar()"/>
+				<label id="mensagem"></label>
+			</form>
+		</section>
+	</body>
+</html>

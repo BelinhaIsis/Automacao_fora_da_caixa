@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="estilos/estilos.css">
+		<script type="text/javascript" src="javascript/util.js"></script>
+		<script type="text/javascript" src="javascript/inserircliente.js"></script>
+	</head>
+	<body onload="inserircliente_CarregarLocalStorages();util_data();inserircliente_VerificarTipoPessoa();">		
+		<header class="container" align="right">
+			<figure class="logotipo">
+				<img src="imagens/logo.png" alt="A Fantástica Fábrica de Guarda-Chuvas">
+			</figure>
+			<nav class="menu-opcoes-superior">
+				<ul>
+					<li>			
+						<label id="boasvindas"></label>
+						<script>
+						  document.getElementById('boasvindas').innerHTML = 'Bem vindo, ' + localStorage.nome_login + "!";
+						</script>							
+					</li>
+					<li>
+						<a id="logout" href="index.html" onclick="util_limparLocalStorage()">Logout</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<section class="container">
+			<nav class="menu-erp">
+				<ul>
+					<li>
+						<a href="#">Clientes</a>
+						<ul>
+							<li><a href="#">Consultar</a></li>
+							<li><a href="inserircliente_identificacao.html">Inserir</a></li>
+							<li><a href="#">Editar</a></li>
+						</ul>
+					</li>						
+					<li>
+						<a href="#">Pedidos</a>
+						<ul>
+							<li><a href="#">Consultar</a></li>
+							<li><a href="#">Inserir</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</section>	
+		<section class="container-conteudo">
+			<form id="form_principal">
+				<h3>Clientes >> Inserir</h3>
+				<h4>Dados de Identificação:</h4>
+				<p> 
+					<label>Tipo de Pessoa: </label>
+					<input type="radio" name="tipo_pessoa" id = "fisica" value="fisica" onclick="inserircliente_radioClick(this)"/>
+					<label for="fisica">Física</label>
+					<input type="radio" name="tipo_pessoa" id = "juridica" value="juridica" onclick="inserircliente_radioClick(this)"/>
+					<label for="juridica">Jurídica</label>
+					<label for="cpf_cnpj">CPF/CNPJ: </label>
+					<input type="text" id="cpf_cnpj" onkeypress='util_MascaraCpfCpnj(this,cpfCnpj,tipo_pessoa)' onblur='util_ValidarDoc(this,tipo_pessoa)'/>
+				</p>
+				<p>
+					<label for="nome_razaosocial">Nome/Razão Social: </label><input type="text" id="nome_razaosocial" class="nome-razaosocial"/>					
+				</p>
+				<p>
+					<label for="email">Email: </label><input type="text" id="email" class="email" onblur="util_validacaoEmail(this)"/>					
+				</p>
+				<p>		
+					<label for="data_nascimento" id="lbldata_nascimento">Data de Nascimento: </label><input type="text" id="data_nascimento" class="data-nascimento" onkeypress="util_mascara(this, '##/##/####')" maxlength="10"/>
+					<label for="sexo" id="lblsexo">Sexo: </label>
+					<select id="sexo">
+						<option value="selecione">Selecione</option>
+						<option value="masculino">Masculino</option>
+						<option value="feminino">Feminino</option>
+					</select>
+					<label for="estado_civil" id="lblestado_civil">Estado Civil:</label>
+					<select id="estado_civil">
+						<option value="selecione">Selecione</option>
+						<option value="casado">Casado</option>
+						<option value="solteiro">Solteiro</option>
+						<option value="enrolado">Enrolado</option>
+					</select>
+				</p>
+			</form>
+		</section>
+		<section class="botoes">
+			<form>
+				<input type="button" id="avancar" value="Avançar" onclick="inserircliente_Avancar()"/>
+			</form>
+		</section>
+	</body>
+</html>

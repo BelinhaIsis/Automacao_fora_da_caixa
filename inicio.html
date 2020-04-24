@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="estilos/estilos.css">
+		<script type="text/javascript" src="javascript/util.js"></script>
+		<script type="text/javascript" src="javascript/inserircliente.js"></script>
+	</head>
+	<body onload="util_data()">		
+		<header class="container" align="right">
+			<figure class="logotipo">
+				<img src="imagens/logo.png" alt="A Fantástica Fábrica de Guarda-Chuvas">
+			</figure>
+			<nav class="menu-opcoes-superior">
+				<ul>
+					<li>			
+						<label id="boasvindas"></label>
+						<script>
+						  document.getElementById('boasvindas').innerHTML = 'Bem vindo, ' + localStorage.nome_login + "!";
+						</script>							
+					</li>
+					<li>
+						<a id="logout" href="index.html" onclick="util_limparLocalStorage()">Logout</a>
+					</li>
+				</ul>
+			</nav>			
+		</header>
+		<section class="container">
+			<nav class="menu-erp">
+				<ul>
+					<li>
+						<a href="#">Clientes</a>
+						<ul>
+							<li><a href="#">Consultar</a></li>
+							<li><a href="inserircliente_identificacao.html">Inserir</a></li>
+							<li><a href="#">Editar</a></li>
+						</ul>
+					</li>						
+					<li>
+						<a href="#">Pedidos</a>
+						<ul>
+							<li><a href="#">Consultar</a></li>
+							<li><a href="#">Inserir</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</section>			
+	</body>
+</html>

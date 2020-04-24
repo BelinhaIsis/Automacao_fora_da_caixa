@@ -1,0 +1,7 @@
+1 - gera as tabelas CLIENTE, USUARIO
+2 - popula a tabela USUARIO
+3 - efetua login
+4 - efetua cadastro de cliente
+5 - com algumas validações de campos e de máscaras (mascaras de campos numericos não barram caracteres)
+6 - página com título dinâmico
+7 - possui campos de telefone e celular não obrigatórios

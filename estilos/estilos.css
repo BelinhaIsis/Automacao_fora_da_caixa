@@ -1,0 +1,234 @@
+.container{
+	margin: 0 auto;
+	width: 940px;
+}
+.container-conteudo{
+	margin: 0 auto;
+	width: 670px;
+	float: left;
+	margin-left: 105px;
+	padding-top: 0px;
+	height: 400px;
+}
+.container-conteudo input[type=text] {
+	border-radius: 4px;
+}
+.container-conteudo input[type=select] {
+	border-radius: 4px;
+}
+
+
+.container-conteudo label {
+	text-align: right;
+	font-weight: bold;
+	padding-left: 10px;
+}
+
+.cep {
+	width: 70px;
+}
+.numero {
+	width: 70px;
+}
+.complemento {
+	width: 100px;
+}
+.data-nascimento {
+	width: 70px;
+}
+
+.email {
+	width: 270px;
+}
+.nome-razaosocial{
+	width: 280px;
+}
+.telefone{
+	width: 90px;
+}
+
+label[for=fisica]
+{
+	padding-left: 0px;
+	font-weight: normal;
+}
+label[for=juridica]
+{
+	padding-left: 0px;
+	font-weight: normal;
+}
+
+.container-conteudo h3{
+	margin: 0 auto;
+	width: 660px;
+	float: top;
+	background-color: #bd4d4d;
+	padding-left: 10px;
+	color: #ffffff;
+}
+
+.container-conteudo h4{
+	width: 660px;
+	background-color: #cc6666;
+	padding-left: 10px;
+	color: #ffffff;
+}
+
+.botoes{
+	margin: 0 auto;
+	width: 930px;
+	clear: both;
+}
+
+.botoes label{
+	float: right;
+	padding-right: 10px;
+	padding-top: 10px;
+	color: #bd4d4d;
+	font-size: 16px;
+	font-weight: bold;
+}
+.botoes input[type=button]{
+	float: right;
+	color: white;
+	background-color: #bd4d4d;
+	width: 75px;
+	text-align: center;
+	padding: 6px 15px;
+	border: 1px solid #cc6666;	
+}
+.botoes input:hover{
+	background-color: #cc6666;
+	border: 1px solid #cc6666;
+}
+
+#menu_principal{ 
+	margin: 0px auto; 
+	width: 280px;
+	float: left; 
+	padding-left: 100px;
+	height: auto;
+}
+#formulario_principal{
+	margin: 0px auto;
+	float: left;  
+	height: auto;
+	width: 780px;
+}
+#tbLogin{
+	float: right;
+	padding: 10px;
+}
+
+.menu{
+	margin-top: 10px;
+	padding-bottom: 10px;
+	float: left;
+}
+
+.menu-erp{
+	margin-left:5px;
+	margin-right:5px;
+	width: 150px;
+	float: left;
+	clear:left;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.menu-erp ul{
+	list-style-type: none;
+	background-color:#bd4d4d;
+	padding-left: 0px;
+	/*border-radius: 4px;	*/
+	text-indent:20px;
+}
+
+.menu-erp li ul{
+	display:none;
+	list-style-type: none;
+}
+.menu-erp li:hover ul{
+	display:inline;
+	position:absolute;
+	width: 150px;
+	margin-left:70px;
+}
+.menu-erp a{
+	text-decoration: none;
+	color: white;
+}
+
+
+.menu-erp li:hover{
+	background-color:#cc6666;
+}
+.menu-erp li{
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+
+/*Estilos para o logotipo*/
+
+.logotipo{
+	margin-top: 0;
+	margin-left: 0;
+	float: left;
+	position: relative;
+}
+
+
+
+
+#boasvindas{
+	position: relative;
+}
+#logout{
+	float: right;
+	position: relative;
+}
+
+
+
+
+/*Estilos para o menu superior*/
+
+.menu-opcoes-superior{
+	float: right;
+	background-color: #bd4d4d;
+	padding-bottom: 10px;
+	border-radius: 4px;
+	margin-right:5px;
+	margin-top: 5px;
+	box-shadow: inset 1px 1px 4px #999;
+	width: 670px;
+}
+
+.menu-opcoes-superior a:hover{
+	color: #b8b5b5;
+}
+
+.menu-opcoes-superior ul{	
+	float: right;
+	margin-bottom: 0px;
+}
+.menu-opcoes-superior a{
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: bold;
+}
+.menu-opcoes-superior ul li{
+	margin-left: 5px;
+	margin-right: 5px;
+	display: inline;
+    float: left;
+}
+
+#login{
+	width: 65px;	
+}
+#senha{
+	width: 65px;
+}
